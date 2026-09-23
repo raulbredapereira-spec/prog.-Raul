@@ -51,5 +51,5 @@ def remove_repetidos(lista):
     for n in lista 
      if n not in resultado
          resultado.append(n)
-    return resultado
+    return 
     pass
