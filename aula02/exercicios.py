@@ -6,13 +6,16 @@ Escreva sua solucao no lugar do 'pass'.
 
 
 def remove_negativos(lista):
-    """Devolve uma lista nova so com os numeros que nao sao negativos."""
-    pass
+    resultado = []  
+    for n in lista:  
+        if n >= 0: 
+            resultado.append(n)  
+    return resultado  
+    
 
 
 def inverte(lista):
-    """Devolve uma lista nova na ordem contraria.
-    Sem usar reverse() e sem usar [::-1]."""
+    "
     pass
 
 

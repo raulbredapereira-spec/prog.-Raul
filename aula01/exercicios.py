@@ -6,30 +6,56 @@ Escreva sua solucao no lugar do 'pass'.
 
 
 def soma_lista(lista):
-    """Devolve a soma de todos os numeros da lista. Lista vazia devolve 0."""
-    pass
+    soma=0
+    for n in lista:
+     soma= soma+n 
+     print(soma)
+    
 
 
 def conta_pares(lista):
-    """Devolve quantos numeros da lista sao pares."""
-    pass
+    cont=0
+    for n in lista:
+        if n % 2 == 0:
+          cont= cont + 1
+    print(cont)
 
 
 def maior_valor(lista):
-    """Devolve o maior numero da lista. A lista nao esta vazia."""
-    pass
-
+    maior=lista[0]
+    for n in lista:
+      if n>maior:
+       maior = n
+    print(maior)
 
 def existe(lista, alvo):
-    """Devolve True se o alvo esta na lista, False se nao esta."""
-    pass
+    for n in lista:
+        if n == alvo:
+            print("true")
+            break
+    else:
+        print("false")
 
 
 def busca_linear(lista, alvo):
-    """Devolve a posicao do alvo na lista, ou -1 se ele nao estiver."""
-    pass
+    posicao=0
+    for n in lista:
+        if n == alvo:
+            posicao= lista.index(alvo)
+            print(posicao)
+        else:
+            print(-1)
 
 
 def segundo_maior(lista):
-    """(Desafio) Devolve o segundo maior, percorrendo a lista uma unica vez."""
-    pass
+    maior = float('-inf')
+    segundo_maior = float('-inf')
+
+    for n in lista:
+     if n > maior:
+         segundo_maior = maior 
+         maior = n              
+     elif n > segundo_maior and n != maior:
+         segundo_maior = n     
+
+    print(segundo_maior)
