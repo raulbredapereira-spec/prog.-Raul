@@ -15,22 +15,41 @@ def remove_negativos(lista):
 
 
 def inverte(lista):
-    "
+     resultado= []
+    for n in range(len(lista) -1, -1, -1):
+        resultado.append(lista[n])
+    return resultado
     pass
 
 
 def busca_binaria(lista, alvo):
-    """Recebe uma lista JA ORDENADA. Devolve a posicao do alvo, ou -1."""
-    pass
-
+    inicio= 0
+    fim= len(lista) - 1 
+    while inicio<=fim:
+        meio= (inicio+fim)//2
+        if lista[meio] == alvo:
+            return meio
+        elif lista[meio]>alvo:
+            fim= meio -1
+        else:
+             inicio= meio+1
+    return -1
 
 def intercala(lista_a, lista_b):
-    """Devolve uma lista nova alternando os elementos das duas.
-    As duas listas tem o mesmo tamanho."""
-    pass
+   resultado = []
+    tam = len(lista_a)
+
+    for i in range(tam):
+        resultado.append(lista_a[i])
+        resultado.append(lista_b[i])
+
+    return resultado
 
 
 def remove_repetidos(lista):
-    """(Desafio) Devolve uma lista nova sem repetidos,
-    mantendo a ordem da primeira aparicao."""
+    resultado= []
+    for n in lista 
+     if n not in resultado
+         resultado.append(n)
+    return resultado
     pass
