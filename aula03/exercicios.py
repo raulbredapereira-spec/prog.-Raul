@@ -13,17 +13,23 @@ Quem devolve so o resultado nao passa nos testes.
 
 
 def soma_contando(lista):
-    """Devolve (soma, operacoes).
-    Conte 1 operacao para cada numero que voce somar.
-    soma_contando([1, 2, 3]) -> (6, 3)"""
-    pass
+    soma = 0
+    operacoes = 0
+    for n in lista:
+        soma= soma+ lista[n]
+        operacoes= operacoes+1
+    return operacoes, soma 
 
 
 def busca_linear_contando(lista, alvo):
-    """Devolve (posicao, comparacoes), ou (-1, comparacoes) se nao achar.
-    Conte 1 comparacao cada vez que comparar um elemento com o alvo.
-    Pare assim que encontrar."""
-    pass
+    comparacoes = 0
+    for i in range(len(lista)):
+        comparacoes += 1
+        if lista[i] == alvo:
+            return i, comparacoes
+            
+    return -1, comparacoes
+
 
 
 def busca_binaria_contando(lista, alvo):
